@@ -1,0 +1,425 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    z-index: 0;
+    }
+    /*barra lateral */
+    .barra {
+        font-family: 'Lato', sans-serif;
+        /**Alto y ancho de donde se va a activar cuando pase el mouse**/
+        width:140px;
+        height:80px;
+        /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+        position:fixed;
+        /*Tiempo en el que va a transitar la animacion*/
+        transition: .4s all ;
+        /*este arriba de todo en la pantalla*/
+        z-index: 1;  
+    }
+    
+    .barra ul{
+        /*solucionar espacios no deseados*/
+        padding:0px;
+        text-align: center;
+            
+    }
+    .barra  li{
+        /*Velocidad de transicion del contenido*/
+        transition:all .3s;
+        list-style: none; 
+    }
+    
+    .barra a{
+        text-decoration: none;
+        
+        font-weight: normal;
+        
+        /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+        transition: .3s all ;
+        /*Se ocultan los elementos*/
+        font-size: 0px;
+        padding:0px;
+    }
+    
+    .barra  h2{
+        text-align: center;
+        color:white;
+        padding:7px;
+        padding-bottom:7px;
+    
+        /*Se oculta el h2*/
+        font-size:0px;   
+    }
+    
+    .barra img{
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+    
+    .barra:hover{
+        /*Tamaño cuando el cursor señale la barra*/
+        width: 25%;
+        height: 100%;
+        
+        /*Color*/
+        background: rgba(25, 60, 82, 0.98);
+    }
+    .barra:hover h2{
+        /*posicion dentro de barra del h2*/
+        padding:15px;
+        font-size: 35px;
+    }
+    .barra:hover a{ 
+        font-size:20px ;
+        color:white;
+        /*Se usa el display block para que el enlace respete el margin*/
+        display: block;
+        padding:20px;
+    }
+    .barra:hover i{
+        /*Desaparecer la imagen*/
+        height:0px;
+    }
+    
+    
+    .barra:hover li{
+        border-top:1px solid #03121b;
+        /*Espacios entre las lineas y el contenido*/
+        
+        width:100%;
+            
+    }
+    .barra:hover ul:last-of-type{
+    
+    
+        border-bottom: 1px solid #03121b;
+    }
+    
+    .barra:hover a:hover{ 
+        font-size: 25px;
+        padding: 30px 0px; 
+        background: rgba(14, 33, 44, 0.98);  
+    }
+    
+ 
+    
+    .bx-menu{
+        font-size: 40px;}
+/* fin de barra  lateral */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Navegacion */
+.nav-main {
+    margin-right: 20px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.nav-brand {
+    width: 50px;
+}
+
+/*Nav LEFT navegacion izquierda*/
+.nav-main ul {
+    display: flex;
+}
+
+/*tamano del texto de los titulos*/
+.nav-main ul li {
+    padding: 10px;
+}
+
+/*lineas bajo de los titulos*/
+.nav-main ul li:hover {
+  border-bottom: 2px solid #ffffff;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+
+
+
+nav.main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/*SHOWCASE*/
+hr {
+    margin: 10px;
+    color: #ffffff;
+}
+.showcase {
+    width: 100%;
+    background: red;
+    height: 550px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+    margin: 10px 0;
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+.showcase h2,
+.showcase p {
+    margin-bottom: 10px;
+}
+.logo{
+    border-radius: 100%;
+    height: 7vw;
+    width: 10vw;
+    position: absolute;
+}
+.separador{
+    width: 70%;
+    height: 10px;
+    background-color: floralwhite ;  
+    z-index: 50;
+    margin-top:50px;
+    position: absolute;
+}
+.return
+
+FOOOTER
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+
+.container{
+  background-color: #000000;
+}
+.logo-rotation {
+  animation: rotation 7s infinite linear;
+} 
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+  
+}
