@@ -1,3 +1,5 @@
+/*
+
 window.onscroll = function(){
     if (document.documentElement.scrollTop>100) {
         document.querySelector('.go-top-container')
@@ -15,4 +17,4 @@ document.querySelector('.go-top-container')
         behavior:'smooth'
     
     });
-});
+}); */

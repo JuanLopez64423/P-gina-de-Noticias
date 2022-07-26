@@ -1,4 +1,4 @@
-const nombresJuegos = JSON.parse('[{"id":0,"nombre":"League of Legends"},{"id":1,"nombre":"Counter strike"},{"id":2,"nombre":"Valorant"},{"id":3,"nombre":"Rocket league"},{"id":4,"nombre":"Mortal Kombat"},{"id":5,"nombre":"Fifa"},{"id":6,"nombre":"Rainbow six"}]');
+const nombresJuegos = JSON.parse('[{"id":0,"nombre":"League of Legends"},{"id":1,"nombre":"Counter strike"},{"id":2,"nombre":"Valorant"},{"id":3,"nombre":"Rocket league"},{"id":4,"nombre":"Mortal Kombat"},{"id":5,"nombre":"Fifa"},{"id":6,"nombre":"Ver Mas Noticias"}]');
 console.log(nombresJuegos);
 
 let textoJason1 = document.getElementById("textoJason1");

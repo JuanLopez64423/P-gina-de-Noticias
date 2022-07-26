@@ -53,14 +53,37 @@ ul {
 }
 
 /*lineas bajo de los titulos*/
-.nav-main ul li a:hover {
+.nav-main ul li:hover {
     border-bottom: 2px solid #ffffff;
-}
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+  
+
 
 nav.main ul.nav-menu {
     flex: 1;
     margin-left: 20px;
 }
+
 
 /*SHOWCASE*/
 hr {
@@ -119,54 +142,25 @@ hr {
     justify-content: center;
     margin-left: 14vw;
     width: 70vw;
-    height: 152vw;
-    color: #000000;
+    height: 173vw;
+    color: white;
     border: #d8d6d6;
-    background-color: #ffffff;
+    
     position: absolute;
     z-index: 2;
+    overflow: auto;
     
 }
 .contenedor{
     display: flex;
+    
 }
 .return{
     margin-top: 160vw;
     position: absolute;
     width: 400px;
 }
-.boton{
-margin-top: 157vw;
-margin-left: 10vw;
-position: absolute;
-width: 300px;
-height: 200px;
-z-index: 50 ;
-font-size: 4vw;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-border-radius: 20px;
-background-color: rgb(rgb(255, 230, 0), green, blue);
-}
-.boton:hover{
-    background-color: rgb(255, 217, 0);
-    transition: .7s;
-}
-.boton2{
-    margin-top: 160vw;
-    margin-left: 20vw;
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    z-index: 50 ;
-    font-size: 4vw;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border-radius: 20px;
-    background-color: rgb(rgb(255, 230, 0), green, blue);
-    }
-    .boton2:hover{
-        background-color: rgb(255, 217, 0);
-        transition: .7s;
-    }
+
     .botl{
         color: #000000;
     }
@@ -228,3 +222,38 @@ background-color: rgb(rgb(255, 230, 0), green, blue);
         }
     }
 
+    .logo-rotation {
+        animation: rotation 7s infinite linear;
+      } 
+      
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+        
+      }
+
+      #fotoTwitt{
+        height: 40%;
+        width: 40%;
+        display: none;
+      }
+
+      #rojoDespuesFoto{
+        margin-top: 10vh;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2vw
+      };
+
+      .textoprin{
+        font-size: 2.5vw;
+      }
+
+      #imagenLogod{
+        width: 100%;
+        height: 40%;
+      }

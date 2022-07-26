@@ -142,16 +142,18 @@ hr {
     justify-content: center;
     margin-left: 14vw;
     width: 70vw;
-    height: 152vw;
-    color: #000000;
+    height: 173vw;
+    color: white;
     border: #d8d6d6;
-    background-color: #ffffff;
+    
     position: absolute;
     z-index: 2;
+    overflow: auto;
     
 }
 .contenedor{
     display: flex;
+    
 }
 .return{
     margin-top: 160vw;
@@ -232,4 +234,21 @@ hr {
           transform: rotate(359deg);
         }
         
+      }
+
+      #fotoTwitt{
+        height: 40%;
+        width: 40%;
+        display: none;
+      }
+
+      #rojoDespuesFoto{
+        margin-top: 10vh;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2vw
+      };
+
+      .textoprin{
+        font-size: 2.5vw;
       }

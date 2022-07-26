@@ -1,4 +1,4 @@
-window.onscroll = function(){
+/*window.onscroll = function(){
     if (document.documentElement.scrollTop>100) {
         document.querySelector('.go-top-container')
         .classList.add('show');
@@ -15,4 +15,4 @@ document.querySelector('.go-top-container')
         behavior:'smooth'
     
     });
-});
+});*/

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Noticia</title>
+    <link rel="stylesheet" href="css/mostrarNoticias.css">
+
+    <!--FONT AWESOME donde saque el icono de la lupa-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!--FONT OSWALD fuente de Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!--CUSTOM CSS este sera mi css personalizado-->
+    <link rel="stylesheet" href="stylecs.css">
+</head>
+<body style="background-image: url('fondo.jpg');">
+<div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+    
+    <div class="container">
+        <nav class="nav-main">
+          <div class=logo>  
+            <a href="/Paginas/1-index/index.html">
+              <img src="/mediaindex/logonoticias (1).png" alt="Noticias Grupo 5 LOGO" class="nav-brand logo-rotation">
+              </a>
+            </div>       
+                 <ul class="nav-menu">
+                <li>
+                    <a href="../4-lol/indexlol.html">League of Legends </a>
+                </li>
+                <li>
+                    <a href="/Paginas/2-cs/indexcs.html">Counter strike </a>
+                </li>
+                <li>
+                    <a href="/Paginas/8-valor/indexvalor.html">Valorant</a>
+                </li>
+                <li style="display:none;">
+                    <a href="/Paginas/6-rs/indexrs.html">Rocket league</a>
+                </li>
+                <li>
+                    <a href="/Paginas/5-mk/indexmk.html">Mortal kombat</a>
+                </li>
+                <li>
+                    <a href="/Paginas/3-fifa/indexfifa.html">Fifa</a>
+                </li>
+                <li>
+                    <a href="mostrarNoticias.php">Ver Mas Noticias</a>
+                </li>
+                </ul>
+                    <li>
+                    <a href="buscarJuego.html">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                </ul>       
+        </nav>
+        <hr>
+
+      
+
+
+    </div>
+
+
+<br><br><br><br><br>
+
+    <form>
+
+    <input style="padding-left:1vw;border-radius: 25px; width: 30%;
+    height: 6vh;" type="text" name="noti_nombre" placeholder="Nombre Del juego"> <br><br><br><br>
+    <input type="submit" value="Buscar Noticia" style="border-radius:15px; width: 12vw;
+    height: 6vh; cursor:crosshair;color:white;background-color: blue;"  formaction="busqueda.php"  formmethod="get">
+
+
+    </form>
+    
+</body>
+</html>
